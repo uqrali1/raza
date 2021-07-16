@@ -26,7 +26,7 @@ ENV QTDIR="/usr/lib64/qt5"
 ENV QMAKESPEC="linux-g++-64" 
 
 RUN cd /src/IMOD && ./setup -i /opt/local/imod-raza/4.11.7 && make -j 2 && make install
-
+RUN rm -rf /src/IMOD
 ENV IMOD="/opt/local/imod-raza/4.11.7"
 ENV PATH="${IMOD}/bin:${PATH}" 
 ENV LD_LIBRARY_PATH="${IMOD}/lib:${LD_LIBRARY_PATH}" 
