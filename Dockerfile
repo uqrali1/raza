@@ -16,8 +16,8 @@ RUN cp sourcecode/raza.c /src/mrc/ && cp sourcecode/Makefile.mrc.IMOD_4-11-7 /sr
 RUN mkdir -p /opt/local/imod-raza/4.11.7
 
 ENV PATH="/usr/lib64/qt5/bin:${PATH}"
-ENV QTDIR=/usr/lib64/qt5 \
-ENV QMAKESPEC=linux-g++-64 
+ENV QTDIR="/usr/lib64/qt5"
+ENV QMAKESPEC="linux-g++-64" 
 
 RUN cd /src && ./setup -i /opt/local/imod-raza/4.11.7 && make -j 2 && make install
 
