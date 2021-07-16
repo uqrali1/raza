@@ -148,5 +148,16 @@ RAZA generates an MRC file as the output.  Post processing can therefore be cond
 To link RAZA edge detection algorithms to post processing tools of the IMOD package. Typically, ‘imodauto’ is applied to convert the RAZA output to generate a stack of 2D contours that can be visualised in IMOD. The IMOD ‘Drawing tool’ is used for the removal of unwanted contours. ‘imodmesh’ is used to render the 3D surfaces. Alternatively, ‘isosurface’ can be used to generate a 3D surface directly, when specific contours do not have to be deleted.  
 
 
+## Using singularity (>= 3.4)
 
+To pull: 
 
+	singularity pull --arch amd64 library://hoangnguyen177/default/raza:0.1
+
+To run, cd to the input:
+
+	singularity exec ${PATH_TO_RAZA_SIF} raza -s 1 -z -1 -r 50 -c 1 ./GroEL_16bit_scalled.mrc ./GroEL_16bit_scalled_s1_z-1_r50_c1.mrc
+
+## Citation
+
+Ali, R.A., Mehdi, A.M., Rothnagel, R., Hamilton, N.A., Gerle, C., Landsberg, M.J. and Hankamer, B., 2017. RAZA: a Rapid 3D z-crossings algorithm to segment electron tomograms and extract organelles and macromolecules. Journal of structural biology, 200(2), pp.73-86.
