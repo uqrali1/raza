@@ -24,7 +24,7 @@ all : $(PROGS)
 # make programs.
 #
 raza$(E) : raza.$(O) nrutil.$(O) 
-	$(CC) -o raza raza.$(O) nrutil.$(O) -g $(LDFLAGS) $(IILIBS) $(CLIBS)
+	$(CC) -o raza raza.$(O) nrutil.$(O) $(LDFLAGS) $(IILIBS) $(CLIBS)
 
 raw2mrc$(E) : raw2mrc.$(O) 
 	$(CC) -o raw2mrc raw2mrc.$(O)  $(LDFLAGS) $(IILIBS) $(CLIBS)
